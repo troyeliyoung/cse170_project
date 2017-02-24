@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <title>Contact Exchange</title>
 	<link rel="stylesheet" href="css/HomePage.css" />
-	<script
-  		src="https://code.jquery.com/jquery-3.1.1.min.js"
-  		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  		crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/HomePage.js"></script>
 </head>
 <body>
 	<nav id="nav_bar">
@@ -53,10 +54,10 @@
 				</button>
 			</li>
 			<li id="settings_folder" class="side_bar_folder">
-				<!-- <button id="setting" class="side_bar_button" onclick="changePageToSettings()">
+				<button id="setting" class="side_bar_button" onclick="changePageToSettings()">
 					Settings
 				</button>
-				<br> -->
+				<br> 
 				<button id="log_off" class="side_bar_button" onclick="logOff()">
 					Log off
 				</button>
@@ -73,88 +74,27 @@
 					Add new contact
 				</button>
 			</li>
+			<!--
 			<li id="scan_QR" class="top_bar_element">
 				<button class="top_bar_button">
 					Scan QR code				
 				</button>
 			</li>
+		-->
 		</ul>
 	</nav>
 	<main>
-		<ul id="contact_list">
-		</ul>
-	</main>
-	<script type="text/javascript">
-		function toggleSidebar(){
-			var $sideBar = $("#side_bar");
-			var $sideBarMask = $("#side_bar_mask");
-			var $topBar = $("#top_bar");
-			var $topBarMask = $("#top_bar_mask");
-			if ($sideBar.hasClass("active")){
-				$sideBar.removeClass("active");
-				$sideBarMask.fadeOut("fast");
-			}else{
-				if ($topBar.hasClass("active")){
-					$topBar.removeClass("active");
-					$topBarMask.fadeOut("fast");
-				}
-				$sideBar.addClass("active");
-				$sideBarMask.fadeIn("fast");
-			}
-		}
-
-		function toggleNewContact(){
-			var $sideBar = $("#side_bar");
-			var $sideBarMask = $("#side_bar_mask");
-			var $topBar = $("#top_bar");
-			var $topBarMask = $("#top_bar_mask");
-			if ($topBar.hasClass("active")){
-				$topBar.removeClass("active");
-				$topBarMask.fadeOut("fast");
-			}else{
-				if ($sideBar.hasClass("active")){
-					$sideBar.removeClass("active");
-					$sideBarMask.fadeOut("fast");
-				}
-				$topBar.addClass("active");
-				$topBarMask.fadeIn("fast");
-			}
-		}
-
-		function changePageToAdd(){
-			window.location.replace("add-new-account.html");
-		}
-
-		function changePageToMyProfile(){
-			window.location.replace("my-profile.html");
-		}
-
-		function changePageToGroups(){
-			window.location.replace("groups.html");
-		}
-
-		function changePageToSettings(){
-			window.location.replace("settings.html");
-		}
-
-		function logOff(){
-			window.location.replace("log-off.html");
-		}
-		function changePageToContact(elem){
-			var $buttonClicked = $(elem);
-			var id = $buttonClicked.attr("id");
-			window.location.href = "contact.html?id="+id;
-		}
-		$.getJSON("people.json", function(data) {
-        	console.log(data);
-        	var i;
-        	for (i = 0; i < data.person.length; i++){
-        		$("#contact_list").append(
-        			'<li class="contact_item"><button id="' + data.person[i].id + '" onclick="changePageToContact(this)"><img  class="contact_img" src="' + data.person[i].imageURL + '"><strong>'+ data.person[i].name+'</strong></button></li>'
-        		);
-        	}
-    	});
-	</script>
+        <ul id="contact_list">
+            {{#each person}}
+                <li class="contact_item">
+                    <button id="{{id}}" onclick="changePageToContact(this)">
+                        <img class="contact_img" src="{{imageURL}}">
+                        <strong>{{name}}</strong>
+                    </button>
+                </li>
+            {{/each}}
+        </ul>
+    </main>
 
 </body>
 </html>

@@ -1,10 +1,10 @@
 ﻿function preprocess() {
-    var url = window.location.href;
-    if (url.includes("id")) {
-        console.log(url);
-    } else {
-        window.location.href = "login";
-    }
+    //var url = window.location.href;
+    //if (url.includes("id")) {
+     //   console.log(url);
+    //} else {
+    //    window.location.href = "login";
+    //}
 }
 window.onpaint = preprocess();
 function toggleSidebar() {
