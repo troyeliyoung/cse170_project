@@ -20,6 +20,7 @@ var search_result = require('./routes/searchResult');
 var select_info = require('./routes/selectInfo');
 var confirm = require('./routes/confirm');
 var done = require('./routes/done');
+var create_new_acc = require('./routes/createNewAcc');
 // Example route
 // var user = require('./routes/user');
 
@@ -58,6 +59,7 @@ app.get('/search_result', search_result.view);
 app.get('/select_info', select_info.view);
 app.get('/confirm', confirm.view);
 app.get('/done', done.view);
+app.get('/create-account', create_new_acc.view);
 //app.get('/project/:id', project.projectInfo);
 //app.get('/palette', palette.randomPalette);
 // Example route
