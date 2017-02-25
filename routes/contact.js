@@ -4,7 +4,7 @@ exports.view = function (req, res) {
 	//var id = req.params.id;
 	var id = req.params.id;
 	console.log("The contact id is: " + id);
-    
+
 	for (i = 0; i < data.person.length; i++){
       if (data.person[i].id == id){
             
@@ -18,7 +18,5 @@ exports.view = function (req, res) {
     //console.log(string);
     res.render('contact', {
     	'contactName': contact
-    	//'contactName': name
-    	//'contactInfo': contactInfo
     });
 };

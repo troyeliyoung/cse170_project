@@ -1,4 +1,4 @@
-﻿function backToAddNewContactPage() {
+function backToAddNewContactPage() {
     //window.location.href = "add-new-account";
     var url = window.location.href;
     console.log(url);
