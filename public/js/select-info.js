@@ -9,7 +9,8 @@ function backToAddNewContactPage() {
     console.log(idStr);
     //window.location.href = "/?id=" + idStr;
     var idStr = index + 5;
-    window.location.href = "/?id=" + idStr;
+    //window.location.href = "/?id=" + idStr;
+    window.location.href = "search_result";
 }
 
 function confirmPage() {

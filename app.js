@@ -15,7 +15,11 @@ var groups = require('./routes/groups');
 var logoff = require('./routes/logOff');
 var login = require('./routes/login');
 var contact = require('./routes/contact');
-
+var add_new_account = require('./routes/addNewAccount');
+var search_result = require('./routes/searchResult');
+var select_info = require('./routes/selectInfo');
+var confirm = require('./routes/confirm');
+var done = require('./routes/done');
 // Example route
 // var user = require('./routes/user');
 
@@ -48,7 +52,12 @@ app.get('/settings', settings.view);
 app.get('/groups', groups.view);
 app.get('/logoff', logoff.view);
 app.get('/login', login.view);
-app.get('/contact', contact.view);
+app.get('/contact/:name', contact.view);
+app.get('/add_new_account', add_new_account.view);
+app.get('/search_result', search_result.view);
+app.get('/select_info', select_info.view);
+app.get('/confirm', confirm.view);
+app.get('/done', done.view);
 //app.get('/project/:id', project.projectInfo);
 //app.get('/palette', palette.randomPalette);
 // Example route

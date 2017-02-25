@@ -8,7 +8,8 @@
     console.log(idStr);
     //window.location.href = "/?id=" + idStr;
     var idStr = index + 5;
-    window.location.href = "/?id=" + idStr;
+    //window.location.href = "/?id=" + idStr;
+    window.location.href = "add_new_account";
 }
 
 function selectInfoToSend() {

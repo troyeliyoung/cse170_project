@@ -44,10 +44,11 @@ function toggleNewContact() {
 }
 
 function changePageToAdd() {
-    var url = window.location.href;
-    var index = url.indexOf("?id=");
-    var idStr = url.substring(index + 4);
-    window.location.href = "add-new-account/" + idStr;
+    //var url = window.location.href;
+    //var index = url.indexOf("?id=");
+    //var idStr = url.substring(index + 4);
+    //window.location.href = "add-new-account/" + idStr;
+    window.location.href = "add_new_account";
 }
 
 function changePageToMyProfile() {
@@ -55,7 +56,7 @@ function changePageToMyProfile() {
     //var index = url.indexOf("?id=");
     //var idStr = url.substring(index + 4);
     //window.location.href = "my-profile/" + idStr;
-    window.location.href = "my-profile"
+    window.location.href = "my-profile";
 }
 
 function changePageToGroups() {
@@ -73,7 +74,7 @@ function changePageToContact(elem) {
     //var $buttonClicked = $(elem);
     //var id = $buttonClicked.attr("id");
     //window.location.href = "contact.html?id=" + id;
-    window.location.href = "contact";
+    //window.location.href = "contact";
 }
 
 

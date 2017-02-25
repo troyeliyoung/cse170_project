@@ -3,5 +3,5 @@ function backToSelectInfo() {
 }
 
 function donePage() {
-    window.location.href = "";
+    window.location.href = "done";
 }
