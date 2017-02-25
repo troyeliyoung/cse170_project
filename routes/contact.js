@@ -2,18 +2,22 @@ var data = require('../people.json');
 
 exports.view = function (req, res) {
 	//var id = req.params.id;
-	var name = req.params.name;
-	console.log("The contact name is: " + name);
-	//var contact = data.person[id];
+	var id = req.params.id;
+	console.log("The contact id is: " + id);
+    
+	for (i = 0; i < data.person.length; i++){
+      if (data.person[i].id == id){
+            
+            var contact = "Name : " + data.person[i].name + "\n" + "Phone : " + data.person[i].phone + "\n" + "Email : " + data.person[i].email;
+            console.log(contact);
+   
+        }
+    }
 
-	//for (i = 0; i < data.person.length; i++){
-    //  if (data.person[i].id == id){
-    //	var contact = data.person[i];
-    //    		$(".contact_info").append(data.person[i].name);
-    // }
-    //}
+    //var contact = JSON.stringify(data);
+    //console.log(string);
     res.render('contact', {
-    	'contactName': name
+    	'contactName': contact
     	//'contactName': name
     	//'contactInfo': contactInfo
     });
