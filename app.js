@@ -14,6 +14,7 @@ var settings = require('./routes/settings');
 var groups = require('./routes/groups');
 var logoff = require('./routes/logOff');
 var login = require('./routes/login');
+var contact = require('./routes/contact');
 
 // Example route
 // var user = require('./routes/user');
@@ -47,6 +48,7 @@ app.get('/settings', settings.view);
 app.get('/groups', groups.view);
 app.get('/logoff', logoff.view);
 app.get('/login', login.view);
+app.get('/contact', contact.view);
 //app.get('/project/:id', project.projectInfo);
 //app.get('/palette', palette.randomPalette);
 // Example route

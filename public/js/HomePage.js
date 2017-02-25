@@ -70,9 +70,10 @@ function logOff() {
     window.location.href = "logoff";
 }
 function changePageToContact(elem) {
-    var $buttonClicked = $(elem);
-    var id = $buttonClicked.attr("id");
-    window.location.href = "contact.html?id=" + id;
+    //var $buttonClicked = $(elem);
+    //var id = $buttonClicked.attr("id");
+    //window.location.href = "contact.html?id=" + id;
+    window.location.href = "contact";
 }
 
 
