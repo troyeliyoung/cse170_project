@@ -6,7 +6,7 @@
     //    window.location.href = "login";
     //}
 }
-window.onpaint = preprocess();
+//window.onpaint = preprocess();
 function toggleSidebar() {
     var $sideBar = $("#side_bar");
     var $sideBarMask = $("#side_bar_mask");
@@ -51,10 +51,11 @@ function changePageToAdd() {
 }
 
 function changePageToMyProfile() {
-    var url = window.location.href;
-    var index = url.indexOf("?id=");
-    var idStr = url.substring(index + 4);
-    window.location.href = "my-profile/" + idStr;
+    //var url = window.location.href;
+    //var index = url.indexOf("?id=");
+    //var idStr = url.substring(index + 4);
+    //window.location.href = "my-profile/" + idStr;
+    window.location.href = "my-profile"
 }
 
 function changePageToGroups() {
@@ -62,11 +63,11 @@ function changePageToGroups() {
 }
 
 function changePageToSettings() {
-    window.location.href = "setting";
+    window.location.href = "settings";
 }
 
 function logOff() {
-    window.location.href = "log-off";
+    window.location.href = "logoff";
 }
 function changePageToContact(elem) {
     var $buttonClicked = $(elem);
