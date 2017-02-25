@@ -21,6 +21,7 @@ var select_info = require('./routes/selectInfo');
 var confirm = require('./routes/confirm');
 var done = require('./routes/done');
 var create_new_acc = require('./routes/createNewAcc');
+var edit_profile = require('./routes/editProfile');
 // Example route
 // var user = require('./routes/user');
 
@@ -60,6 +61,7 @@ app.get('/select_info', select_info.view);
 app.get('/confirm', confirm.view);
 app.get('/done', done.view);
 app.get('/create-account', create_new_acc.view);
+app.get('/edit-profile',edit_profile.view);
 //app.get('/project/:id', project.projectInfo);
 //app.get('/palette', palette.randomPalette);
 // Example route

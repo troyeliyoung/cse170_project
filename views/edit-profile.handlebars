@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <title>Edit profile</title>
+	<link rel="stylesheet" href="/css/edit_profile.css" />
+	<script
+  		src="https://code.jquery.com/jquery-3.1.1.min.js"
+  		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  		crossorigin="anonymous"></script>
+    <script src="/js/EditProfile.js"></script>
+</head>
+<body>
+	<nav id="nav_bar">
+		<ul id="nav_bar_content">
+			<li id="nav_bar_left">
+				<button id="back_button" class="click_button" onclick="backToIndex()">
+					<strong>Back</strong>
+				</button>
+			</li>
+			<li id="nav_bar_middle">
+				<strong>Add profile</strong>
+			</li>
+			<li id="nav_bar_right">
+			</li>
+		</ul>
+	</nav>
+    <main>
+        <ul id="input_thing">
+            <li>
+                <strong>Type of contact</strong>
+                <form action="/action_page.php">
+                    <select id = "type" name="type_of_contact">
+                        <option value="phone">Phone Number</option>
+                        <option value="email">Email</option>
+                        <option value="wechat">WeChat</option>
+                        <option value="fb">Facebook page</option>
+                        <option value="linkedin">LinkedIn page</option>
+                    </select>
+                    <br><br>
+                    <!--
+                    <input type="submit">
+                -->
+                </form> 
+            </li>
+            <li>
+                <strong>Usage</strong>
+                <form action="/action_page.php">
+                    <select id = "usage" name="usage">
+                        <option value="home">Home</option>
+                        <option value="work">Work</option>
+                        <option value="school">School</option>
+                    </select>
+                    <br><br>
+                    <!--
+                    <input type="submit">
+                -->
+                </form>
+            </li>
+            <li>
+                <strong>Content</strong>
+                <br><br>
+                <input id="con" type="text" name="" placeholder="Example: 123-456-7890">
+            </li>
+            <li>
+                <button class="click_button" onclick="add()">
+                    Add
+                </button>
+            </li>
+        </ul>
+    </main>
+	</body>
+</html>

@@ -57,7 +57,8 @@ function editProfile() {
     var url = window.location.href;
     var index = url.indexOf("/my-profile/");
     var idStr = url.substring(index + 12);    
-    window.location.href = "../edit-profile/" + idStr;
+    //window.location.href = "../edit-profile/" + idStr;
+    window.location.href = "edit-profile";
 }
 
 function infoClick(elem) {
