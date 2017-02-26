@@ -3,10 +3,18 @@
     var url = window.location.href;
     var index = url.indexOf("/edit-profile/");
     var idStr = url.substring(index + 14);
-    var type = document.getElementById('type');
-    var usage = document.getElementById('usage');
+    //var type = document.getElementById('type');
+    var e = document.getElementById("type");
+    var type = e.options[e.selectedIndex].text;
+    var ee = document.getElementById("usage");
+    var usage = ee.options[ee.selectedIndex].text;
+    var content = document.getElementById("content").value;
     console.log(type);
     console.log(usage);
+    console.log(content);
+    if (content.length == 0) {
+        alert("Content cannot be empty!")
+    }
     //if (title.value.length == 0) {
     //    alert("Title cannot be empty!")
     //} else {
@@ -22,7 +30,7 @@
     //        }
     //    }
     //}  
-    window.location.href = "/";
+    window.location.href = "my-profile";
 }
 
 function review(result) {

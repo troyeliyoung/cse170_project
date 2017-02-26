@@ -1,9 +1,11 @@
-﻿exports.view = function (req, res) {    
+﻿var data = require("../myAccount.json");
+
+exports.view = function (req, res) {    
     //var id = req.params.id.toString();  
     //var userProfile = require('../' + id + '.json');
     //console.log(userProfile);
     //res.render('my-profile', userProfile);
-    res.render('my-profile');
+    res.render('my-profile', data);
 };
 
 exports.togglePublic = function (req, res) {

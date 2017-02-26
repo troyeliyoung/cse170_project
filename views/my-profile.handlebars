@@ -35,20 +35,22 @@
             </li>
             <li>
                 <ul id="buttonContainer">
-                    {{#each selfInfos}}
+                    {{#each profile}}
                     <li id="{{id}}" class="profile">
                         <div id="big{{id}}" class="infoButton" onclick="infoClick(this)">
                             <ul class="contacts">
-                                <li class="left">{{Title}}</li>
-                                <li class="right">{{Subtitle}}</li>                                
+                                <li class="left">{{name}}</li>
+                                <li class="right">{{usage}}</li>   
+                                <li class="right">{{content}}</li>                              
                             </ul>
-                            <ul id="sub{{id}}" class="contacts">
-                                <li class="left">{{content}}</li>
+                            <ul id="sub{{name}}" class="contacts">
+                               <!--
                                 <li class="rightsmall">
                                     <button id="{{id}}" class="click_button2" onclick="togglePublic(this)">{{public}}</button>
                                 </li>
+                                -->
                                 <li class="rightsmall">
-                                    <button id="{{id}}" class="click_button3" onclick="remove(this)">delete</button>
+                                    <button id="{{name}}" class="click_button3" onclick="remove(this)">delete</button>
                                 </li>
                             </ul>
                         </div>
