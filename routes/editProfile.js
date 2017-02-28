@@ -6,7 +6,7 @@ exports.view = function (req, res) {
 }
 
 exports.addInfo = function (req, res) {    
-    var name=req.query.name;
+    var name=req.query.type;
 	var usage=req.query.usage;
 	var content = req.query.content;
 	var newFriend={
@@ -18,7 +18,7 @@ exports.addInfo = function (req, res) {
 	data.profile.push(newFriend);
 	var json = JSON.stringify(data);
     fs.writeFile("myAccount.json", json, 'utf8', function errorCallback(err) {
-        console.log("write");
+        //console.log("write");
         if (err) {            
             console.log("wrong");
         } else {
