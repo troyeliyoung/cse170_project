@@ -10,7 +10,7 @@ function backToAddNewContactPage() {
     //window.location.href = "/?id=" + idStr;
     var idStr = index + 5;
     //window.location.href = "/?id=" + idStr;
-    window.location.href = "search_result";
+    window.location.href = "add_new_account";
 }
 
 function confirmPage() {
