@@ -33,9 +33,8 @@
 		</ul>
 	</nav>
 	<main>
+		<h3>Please select the people you want to send your information to:</h3>
 		<p id="demo"></p>
-
-
 		<ul id="result_list">
 			{{#each user}}
                 <li class="search_item">
@@ -48,6 +47,7 @@
 							var last_name = addr.substring(index_last+3);
 							var person_found = first_name + " " + last_name;
 							//document.getElementById("demo").innerHTML = "Name: " + person_found;
+							//if(person_found.toUpperCase() == {{name}}.toUpperCase()){}
                         	if(person_found == "{{name}}"){
                         		document.getElementById("demo").innerHTML = '<strong>{{name}}</strong>                       <input type="checkbox" name="add" value="add_ckb"> <br>';
                         	}
