@@ -26,5 +26,25 @@
 			</li>
 		</ul>
 	</nav>
+	<main>
+			{{#each group}}
+			<div class="group" id="{{id}}">
+				<div class = thumbnail>
+                	<a href="#">
+						<p>{{gname}}</p>
+					</a>
+					
+                	<!--
+                	<div class="details"></div>
+                    <button id="{{id}}" onclick="changePageToContact(this)">
+                        <img class="contact_img" src="{{imageURL}}">
+                        <strong>{{name}}</strong>
+                    </button>
+                	-->
+                </div>
+            </div>
+            {{/each}}
+            <div class="details"></div>
+	</main>
 	</body>
 </html>
