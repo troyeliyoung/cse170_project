@@ -39,7 +39,7 @@
 		<ul id="result_list">
 			{{#each user}}
                 <li class="search_item">
-                    <button id="{{id}}" onclick="requestAddToContact(this)">
+                    <!--<button id="{{id}}" onclick="requestAddToContact(this)"> -->
                         <script>
                         	var addr = window.location.href;
 							var index_first = addr.search("name=");
@@ -48,7 +48,6 @@
 							var last_name = addr.substring(index_last+3);
 							var person_found = first_name + " " + last_name;
 							//document.getElementById("demo").innerHTML = "Name: " + person_found;
-		
                         	if(person_found == "{{name}}"){
                         		document.getElementById("demo").innerHTML = '<strong>{{name}}</strong>                       <input type="checkbox" name="add" value="add_ckb"> <br>';
                         	}
@@ -58,7 +57,7 @@
                         <strong>{{name}}</strong>                       
                         <input type="checkbox" name="add" value="add_ckb"> <br> 
                         -->                      
-                    </button>
+                    <!--</button> -->
                 </li>
             {{/each}}
 		</ul>

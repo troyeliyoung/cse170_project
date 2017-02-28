@@ -33,14 +33,19 @@
 		</ul>
 	</nav>
 	<main>
+		<p id="demo"></p>
+		<script>
+			var addr = window.location.href;
+			var index_first = addr.search("name=");
+			var res_name = addr.substring(index_first+ 5);
+			document.getElementById("demo").innerHTML = '<strong>There is no result for </strong>' + res_name;
+		</script>
 		<ul id="result_list">
 			{{#each user}}
                 <li class="search_item">
-                    <button id="{{id}}" onclick="requestAddToContact(this)">
                         <img class="contact_img" src="{{imageURL}}">
                         <strong>{{name}}</strong>                       
-                        <input type="checkbox" name="add" value="add_ckb"> <br>                    
-                    </button>
+                        <input type="checkbox" name="add" value="add_ckb"> <br>      
                 </li>
             {{/each}}
 		</ul>

@@ -186,7 +186,7 @@ function searchResult() {
             //document.getElementById("demo").innerHTML = name;
         }
         else{
-            window.location.href = "search_result_all";
+            window.location.href = "search_result_all?name=" + name;
         }
     }
     //document.getElementById("demo").innerHTML = name;
