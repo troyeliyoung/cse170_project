@@ -15,6 +15,11 @@
 	<nav id="nav_bar">
 		<ul id="nav_bar_content">
 			<li id="nav_bar_left">
+				<div class="menu_button" onclick="toggleSidebar()">
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+				</div>
 				<button id="back_button" class="click_button" onclick="backToAddContactPage()">
 					<strong>Back</strong>
 				</button>
@@ -26,11 +31,12 @@
 			</li>
 		</ul>
 	</nav>
+	
 	<main>
 		<ul id="search_package">
 			<li>
 				<p>For testing, try users in user.json, such as Xindi Li, Harry Liu, etc. </p>
-				<input id="search_str" type="text" name="" placeholder="Enter username or account number" value="">
+				<input id="search_str" type="text" name="" placeholder="Enter username" value="">
 			</li>
 			<li>
 				<button class="search_button" onclick="searchResult()">

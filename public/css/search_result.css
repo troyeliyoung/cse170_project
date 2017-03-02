@@ -127,3 +127,9 @@ main {
 	min-width: 25px;
 	min-height: 25px;
 }
+
+.divider{
+    width:100px;
+    height:auto;
+    display:inline-block;
+}
