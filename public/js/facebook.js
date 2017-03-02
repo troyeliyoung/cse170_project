@@ -49,8 +49,10 @@ function toggleSidebar() {
         $sideBar.addClass("active");
         $sideBarMask.fadeIn("fast");
     }
-    $("#name").text(name);
-    $("#photo").attr('src', pic_url);
+    if(name != ""){
+      $("#name").text(name);
+      $("#photo").attr('src', pic_url);
+    }
     //console.log(window.varName);
     //console.log(name);
 }
