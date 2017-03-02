@@ -4,11 +4,16 @@
     var name = $user_name.value;
     var pass = $user_pass.value;
     if (name.length == 0) {
-        //alert("User name cannot be empty!");
-        //$user_pass.value = '';
+        alert("User name cannot be empty!");
+        $user_pass.value = '';
+    }else{
+        if(pass.length == 0){
+            alert("Please enter your password!")
+        }else{
+           window.location.href = "/";
+        }
     }
-    $.get('/loginProcess/' + name + '/' + pass, loginResult);
-    window.location.href = "/";
+    //$.get('/loginProcess/' + name + '/' + pass, loginResult);
 }
 
 function loginResult(result) {    

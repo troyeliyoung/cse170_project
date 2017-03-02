@@ -7,23 +7,10 @@
     //}
 }
 //window.onpaint = preprocess();
-function toggleSidebar() {
-    var $sideBar = $("#side_bar");
-    var $sideBarMask = $("#side_bar_mask");
-    var $topBar = $("#top_bar");
-    var $topBarMask = $("#top_bar_mask");
-    if ($sideBar.hasClass("active")) {
-        $sideBar.removeClass("active");
-        $sideBarMask.fadeOut("fast");
-    } else {
-        if ($topBar.hasClass("active")) {
-            $topBar.removeClass("active");
-            $topBarMask.fadeOut("fast");
-        }
-        $sideBar.addClass("active");
-        $sideBarMask.fadeIn("fast");
-    }
-}
+
+//function toggleSidebar() {
+    
+//}
 
 function toggleNewContact() {
     var $sideBar = $("#side_bar");

@@ -39,7 +39,17 @@
 					<strong>Create an account</strong>
 				</button>
 			</li>
+			<li>
+				<p class="facebookLogin">
+          			<li id = "texts">Log in with Facebook?
+          				<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+          				</fb:login-button>
+          			</li>
+        		</p>
+			</li>
 		</ul>
 	</main>
+	{{> facebook}}
+  	<script src="/js/facebook.js"></script>
 	</body>
 </html>
