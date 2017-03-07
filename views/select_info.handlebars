@@ -9,6 +9,8 @@
   		src="https://code.jquery.com/jquery-3.1.1.min.js"
   		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   		crossorigin="anonymous"></script>
+   	<script src="/js/Settings.js"></script>
+  	<script src="/js/select-info.js"></script>
 </head>
 <body>
 	<nav id="nav_bar">
@@ -31,20 +33,19 @@
 
 	<main>
 		<h3>Please select the information you want to send out:</h3>
-		<ul id="contact_info_list">
-			
-			<form action="/action_page.php" method="get">
-  				<input type="checkbox" name="way" value="phone" checked="checked"> Phone Number<br>
-  				<input type="checkbox" name="way" value="email" checked="checked"> Email Address<br>
-  				<input type="checkbox" name="way" value="facebook"> Facebook<br>
-  				<input type="checkbox" name="way" value="linkedin"> LinkedIn<br>
-  				<input type="checkbox" name="way" value="linkedin"> WeChat<br>
-  				<input type="checkbox" name="way" value="linkedin"> Instagram<br>
+		<ul id="contact_info_list">			
+			<form>
+  				<input id = "1" type="checkbox" name="way" value="phone"> Phone Number<br>
+  				<input id = "2" type="checkbox" name="way" value="email"> Email Address<br>
+  				<input id = "3" type="checkbox" name="way" value="facebook"> Facebook<br>
+  				<input id = "4" type="checkbox" name="way" value="linkedin"> LinkedIn<br>
+  				<input id = "5" type="checkbox" name="way" value="wechat"> WeChat<br>
+  				<input id = "6" type="checkbox" name="way" value="instagram"> Instagram<br>
   				<!--<input type="submit" value="Submit"> -->
+  				<br>
+  				<!--<button class="click_button" onclick="importDefault()">OK</button>-->
 			</form>
 		</ul>
 	</main>
-    <script src="/js/select-info.js"></script>
-
 </body>
 </html>
